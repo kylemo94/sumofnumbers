@@ -1,15 +1,15 @@
 const numList = [1, 1, 2, 4];
 
-function forSum(nums){
+function sumFor(nums){
   let total = 0;
   for(const a of nums){
     total+= a;
   }
   return total;
 }
-console.log(forSum(numList));
+console.log(sumFor(numList));
 
-function whileSum(nums){
+function sumWhile(nums){
   let total = 0;
   let i = 0;
   while(i != nums.length){
@@ -18,18 +18,18 @@ function whileSum(nums){
   }
   return total;
 }
-console.log(whileSum(numList));
+console.log(sumWhile(numList));
 
-function recursionSum(nums){
+function sumRecursion(nums){
   if(nums.length === 0){
     return 0;
   }
-    return nums[0] + recursionSum(nums.slice(1, nums.length));
+    return nums[0] + sumRecursion(nums.slice(1, nums.length));
 }
-console.log(recursionSum(numList));
+console.log(sumRecursion(numList));
 
-function underscoreSum(nums){
+function sumTheSimpleWay(nums){
   let n = 0;
   return _.reduce(nums, function(val, n){return val + n},0);
 }
-console.log(underscoreSum(numList));
+console.log(sumTheSimpleWay(numList));
